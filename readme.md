@@ -1,44 +1,70 @@
-# Login page for ServiceNow applications and portals
+# Getting Started with Create React App
 
-Custom login page built with React. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It provides out-of-the-box ServiceNow login functionality, including `remember me` option.
+## Available Scripts
 
-![img](assets/img1.png)
+In the project directory, you can run:
 
-Login page implemented as a simple React application and can be used as a gateway for any ServiceNow application and portal.
+### `npm start`
 
-## How to test/run locally
-1. Copy/clone the repo
-2. Install all dependencies by `npm i`
-3. Run the app by `npm start`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-> IMPORTANT: You won't be able to test login process locally, since the app should be run _inside_ of ServiceNow instance. However, you can customize HTML/CSS markup etc. 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## How to deploy to ServiceNow
-1. Build the application by `npm run build`.
-2. Save JS and CSS files from Build/static folder as Style Sheets in ServiceNow.
-3. Upload logo image from Build/static/media folder to ServiceNow: go to System UI/Images and create a new image with a name `static/media/login.633c58d6.png`:
+### `npm test`
 
-![img](assets/img2.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-4. Create a _direct_ UI page and copy HTML code from the file 'Build/index.html`. You also need to do the following steps:
-    - update `window.mainAppPage` with the URL where you want to redirect in case of successfull login
-    - update `window.loggedUsername` with this specific code `$[userName]`
-    - update css and js references with the corresponding sys_ids from step #2
+### `npm run build`
 
-You UI page should look like this:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![img](assets/img3.png)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-5. Make UI page public:
-    - activate Public Pages module under System Definition menu
-    - create a new record for you UI page
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-![img](assets/img4.png)
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-6. You login page should be publicly available by the URL provided on the UI page record.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Contacts
-Questions, requests for customization or development services - support@dev-labs.io
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
