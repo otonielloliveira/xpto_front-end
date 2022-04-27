@@ -48,10 +48,9 @@ const Home = () => {
 
     if (!token) {
       navigation("/login");
+      return;
     }
-  }, []);
 
-  useEffect(() => {
     getDataMe();
     getDataUrls();
 

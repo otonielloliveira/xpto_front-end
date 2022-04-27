@@ -1,6 +1,5 @@
 import axios from "axios";
 import { getToken, logout } from "./Auth";
-import { errorFn } from "./Yellow/Dist/Message";
 const baseURL = "http://127.0.0.1:8000/";
 const baseURLProd = "https://api-xpto.yellowsistemas.com.br/";
 const api = axios.create({

@@ -3,7 +3,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -13,7 +12,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { errorFn, loadingFn } from "../Services/Yellow/Dist/Message";
 import api from "../Services/api";
 import { login as _login } from "../Services/Auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -118,7 +117,7 @@ const Login = () => {
             </Button>
             <Grid container>
               <Grid item>
-                <Link href="/register" variant="body2">
+                <Link to="/register" variant="body2">
                   {"Nao tem cadastro: Fazer aqui..."}
                 </Link>
               </Grid>
